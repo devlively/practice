@@ -78,7 +78,7 @@ public class XMLAnalysis {
 				XMLDocument pXml = new XMLDocument(defaultPath + "/P_" + fileId + "_TB.xml", this.builder);
 
 				Node pRows = nodeMethod.getNodeByTagName(pXml.getDocumentElement(), "ROWS");
-				Map<String, String> pRowsMap = ConvertToMap(pRows);
+				Map<String, String> pRowsMap = convertToMap(pRows);
 				
 				if(pRowsMap.size() <= 0)
 					continue;
@@ -106,7 +106,7 @@ public class XMLAnalysis {
 	 * @param pRows Row들의 상위 노드
 	 * @return Row들이 저장되어있는 Map
 	 */
-	private Map<String, String> ConvertToMap(Node pRows)
+	private Map<String, String> convertToMap(Node pRows)
 	{
 		Map<String, String> map = new HashMap<String, String>();
 		
