@@ -146,13 +146,13 @@ public class XMLAnalysis {
 			{
 				String nodeName = node.getNodeName();
 				if(find != 1 && "P_ID".compareTo(nodeName) == 0
-						&& !("".compareTo(node.getTextContent()) == 0))
+				     && !("".compareTo(node.getTextContent()) == 0))
 				{
 					key = node.getTextContent();
 					find += 1;
 				}
 				else if(find != 2 && "LICENSE_ID".compareTo(nodeName) == 0
-						&& !("".compareTo(node.getTextContent()) == 0))
+				          && !("".compareTo(node.getTextContent()) == 0))
 				{
 					value = node.getTextContent();
 					find += 2;
